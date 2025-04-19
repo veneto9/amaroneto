@@ -1,141 +1,188 @@
-/* styles.css com cores clássicas */
-
+/* styles.css com cores terrosas inspirado em Lucy McGowan e Andrew Heiss */
 body {
   font-family: "Georgia", serif;
   margin: 0;
-  padding: 2rem 0;
-  background-color: #f9f6f2;
+  padding: 0;
+  background-color: #f5f1eb;
   color: #3c2e27;
   line-height: 1.6;
 }
 
 main {
-  max-width: 720px;
-  margin: 2rem auto; /* ajustado */
-  padding: 0 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
   line-height: 1.7;
-  background-color: #fffaf6;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+  background-color: #fdfbf8;
+  box-shadow: 0 5px 15px rgba(124, 91, 67, 0.08);
   border-radius: 8px;
-  font-size: 0.95rem; /* novo */
+  font-size: 1rem;
 }
 
 h1 {
-  font-size: 1.6rem; /* ajustado */
+  font-size: 1.8rem;
   text-align: center;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   padding: 1rem;
-  background-color: #f2ebe1;
-  border-bottom: 2px solid #d6cfc3;
-  color: #3c2e27;
+  background-color: #eae0d5;
+  border-bottom: 2px solid #c8b8a9;
+  color: #5d4037;
 }
 
 h2 {
-  font-size: 1.2rem; /* ajustado */
-  border-bottom: 2px solid #d6cfc3;
-  padding-bottom: 0.3rem;
-  margin-top: 1rem;
-  margin-bottom: 0.8rem;
-  color: #3c2e27;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #c8b8a9;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #5d4037;
 }
 
 p, ul {
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.8rem 0 1.2rem 0;
 }
 
 ul {
   list-style-type: square;
   padding-left: 1.5rem;
+  color: #5d4037;
 }
 
 a {
-  color: #6b4c3b;
+  color: #8b6c5c;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
+  color: #c8765f;
   text-decoration: underline;
 }
 
 hr {
   border: none;
-  border-top: 1px solid #d6cfc3;
-  margin: 1.5rem 0;
+  border-top: 1px solid #c8b8a9;
+  margin: 2rem 0;
 }
 
 footer {
   text-align: center;
   font-size: 0.85rem;
-  padding: 1rem;
-  background-color: #f2ebe1;
+  padding: 1.5rem;
+  background-color: #eae0d5;
   color: #5c4a3d;
-  border-top: 1px solid #d6cfc3;
+  border-top: 1px solid #c8b8a9;
 }
-header { text-align: center; padding: 0.3rem 1rem 0.2rem; background-color: #f2ebe1; border-bottom: 2px solid #d6cfc3; } header h1 { font-size: 1.4rem; margin-bottom: 0.2rem; } header p { margin-top: 0; font-size: 0.9rem; }
+
+header { 
+  text-align: center; 
+  padding: 1.5rem 1rem; 
+  background-color: #eae0d5; 
+  border-bottom: 2px solid #c8b8a9; 
+} 
+
+header h1 { 
+  font-size: 1.8rem; 
+  margin-bottom: 0.5rem; 
+  color: #5d4037;
+} 
+
+header p { 
+  margin-top: 0; 
+  font-size: 1rem; 
+  color: #6b4c3b;
+}
+
 /* Estilo para o menu de navegação */
 nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
   padding: 1.2rem;
-  background-color: #eae3d8;
-  border-bottom: 1px solid #cfc7b7;
+  background-color: #d5c6b6;
+  border-bottom: 1px solid #c8b8a9;
 }
 
 nav a {
-  color: #5a4332;
+  color: #5d4037;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 3px;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #8b6c5c;
+}
+
+nav a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8b6c5c;
+  transition: width 0.3s ease;
+}
+
+nav a:hover:after {
+  width: 100%;
 }
 
 /* Botão de voltar */
 .botao-voltar {
   display: inline-block;
   margin: 1rem 0 0 1.5rem;
-  padding: 0.3rem 0.8rem;
-  background-color: #f2ebe1;
-  border: 1px solid #d6cfc3;
+  padding: 0.5rem 1rem;
+  background-color: #d5c6b6;
+  border: 1px solid #c8b8a9;
   border-radius: 4px;
-  color: #5c4a3d;
+  color: #5d4037;
   font-size: 0.9rem;
   text-decoration: none;
   font-weight: bold;
   font-family: Georgia, serif;
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .botao-voltar:hover {
-  background-color: #e6dccd;
+  background-color: #c8b8a9;
+  transform: translateY(-2px);
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
   body {
-    padding: 1rem;
+    padding: 0;
   }
-
+  
   main {
     padding: 1.5rem;
+    margin: 1rem;
+    width: auto;
   }
-
+  
   h1 {
-    font-size: 1.5rem; /* responsivo ajustado */
+    font-size: 1.5rem;
   }
-
+  
   h2 {
-    font-size: 1.1rem; /* responsivo ajustado */
+    font-size: 1.2rem;
   }
-
+  
   nav {
-    flex-direction: column;
-    align-items: center;
+    padding: 0.8rem;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
   }
 }
 
@@ -143,18 +190,46 @@ nav a:hover {
 .botao-voltar.contextual {
   display: inline-block;
   margin: 0 0 1rem 0;
-  padding: 0.2rem 0.6rem;
+  padding: 0.3rem 0.8rem;
   font-size: 0.85rem;
-  background-color: #eae3d8;
-  color: #5c4a3d;
-  border: 1px solid #cfc7b7;
+  background-color: #d5c6b6;
+  color: #5d4037;
+  border: 1px solid #c8b8a9;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   font-family: Georgia, serif;
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .botao-voltar.contextual:hover {
-  background-color: #e1d6c7;
+  background-color: #c8b8a9;
+  transform: translateY(-2px);
+}
+
+/* Estilos inspirados em Andrew Heiss para cards de projetos */
+.projeto-card {
+  background-color: #faf6f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #8b6c5c;
+  box-shadow: 0 3px 10px rgba(124, 91, 67, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(124, 91, 67, 0.12);
+}
+
+.projeto-card h3 {
+  margin-top: 0;
+  color: #5d4037;
+  font-size: 1.2rem;
+}
+
+/* Estilo para seções de conteúdo */
+.secao {
+  margin-bottom: 2.5rem;
 }
