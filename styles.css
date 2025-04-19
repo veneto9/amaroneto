@@ -1,11 +1,11 @@
-/* styles.css */
+/* styles.css com cores clássicas */
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Georgia", serif;
   margin: 0;
   padding: 2rem 0;
-  background-color: #f0f2f5;
-  color: #333;
+  background-color: #f9f6f2;
+  color: #3c2e27;
   line-height: 1.6;
 }
 
@@ -14,27 +14,27 @@ main {
   margin: 3rem auto;
   padding: 0 2rem;
   line-height: 1.7;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  background-color: #fffaf6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
   border-radius: 8px;
 }
 
 h1, h2 {
-  color: #1a237e;
+  color: #3c2e27;
   margin-top: 1.5rem;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
   padding: 1rem;
-  background-color: #e8eaf6;
-  border-bottom: 2px solid #c5cae9;
+  background-color: #f2ebe1;
+  border-bottom: 2px solid #d6cfc3;
 }
 
 h2 {
-  font-size: 1.4rem;
-  border-bottom: 2px solid #c5cae9;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #d6cfc3;
   padding-bottom: 0.3rem;
   margin-bottom: 0.8rem;
 }
@@ -49,7 +49,7 @@ ul {
 }
 
 a {
-  color: #0d47a1;
+  color: #6b4c3b;
   text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ a:hover {
 
 hr {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #d6cfc3;
   margin: 1.5rem 0;
 }
 
@@ -67,34 +67,35 @@ footer {
   text-align: center;
   font-size: 0.85rem;
   padding: 1rem;
-  background-color: #e8eaf6;
-  color: #555;
-  border-top: 1px solid #c5cae9;
+  background-color: #f2ebe1;
+  color: #5c4a3d;
+  border-top: 1px solid #d6cfc3;
 }
 
 /* Estilo para o cabeçalho */
 header {
   text-align: center;
   padding: 2rem 1rem 1rem 1rem;
-  background-color: #e8eaf6;
-  border-bottom: 2px solid #c5cae9;
+  background-color: #f2ebe1;
+  border-bottom: 2px solid #d6cfc3;
 }
 
 /* Estilo para o menu de navegação */
 nav {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
-  padding: 1rem;
-  background-color: #f1f3f6;
-  border-bottom: 1px solid #ccc;
+  padding: 1.2rem;
+  background-color: #eae3d8;
+  border-bottom: 1px solid #cfc7b7;
 }
 
 nav a {
-  color: #1a237e;
+  color: #5a4332;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
@@ -112,10 +113,15 @@ nav a:hover {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
   }
 }
