@@ -74,13 +74,7 @@ footer {
 }
 
 /* Estilo para o cabeçalho */
-header {
-  text-align: center;
-  padding: 0.5rem 1rem; /* ajustado */
-  background-color: #f2ebe1;
-  border-bottom: 2px solid #d6cfc3;
-}
-
+header { text-align: center; padding: 0.3rem 1rem 0.2rem; background-color: #f2ebe1; border-bottom: 2px solid #d6cfc3; } header h1 { font-size: 1.4rem; margin-bottom: 0.2rem; } header p { margin-top: 0; font-size: 0.9rem; }
 /* Estilo para o menu de navegação */
 nav {
   display: flex;
