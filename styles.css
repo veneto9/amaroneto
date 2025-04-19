@@ -19,24 +19,24 @@ main {
   border-radius: 8px;
 }
 
-h1, h2 {
-  color: #3c2e27;
-  margin-top: 1.5rem;
-}
-
 h1 {
   font-size: 2.2rem;
   text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 1rem;
   background-color: #f2ebe1;
   border-bottom: 2px solid #d6cfc3;
+  color: #3c2e27;
 }
 
 h2 {
   font-size: 1.5rem;
   border-bottom: 2px solid #d6cfc3;
   padding-bottom: 0.3rem;
+  margin-top: 1rem;
   margin-bottom: 0.8rem;
+  color: #3c2e27;
 }
 
 p, ul {
@@ -75,7 +75,7 @@ footer {
 /* Estilo para o cabeçalho */
 header {
   text-align: center;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1.2rem 1rem 0.5rem 1rem;
   background-color: #f2ebe1;
   border-bottom: 2px solid #d6cfc3;
 }
