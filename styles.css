@@ -9,6 +9,14 @@ body {
   line-height: 1.6;
 }
 
+/* Container geral mais estreito e centralizado */
+main {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1.2rem;
+  line-height: 1.7;
+}
+
 h1, h2 {
   color: #1a237e;
   margin-top: 1.5rem;
@@ -62,6 +70,7 @@ footer {
   border-top: 1px solid #c5cae9;
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
   body {
     padding: 0 1rem;
@@ -73,5 +82,9 @@ footer {
 
   h2 {
     font-size: 1.2rem;
+  }
+
+  main {
+    padding: 0 1rem;
   }
 }
