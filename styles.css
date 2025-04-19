@@ -11,16 +11,17 @@ body {
 
 main {
   max-width: 720px;
-  margin: 3rem auto;
+  margin: 2rem auto; /* ajustado */
   padding: 0 2rem;
   line-height: 1.7;
   background-color: #fffaf6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
   border-radius: 8px;
+  font-size: 0.95rem; /* novo */
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 1.6rem; /* ajustado */
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -31,7 +32,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* ajustado */
   border-bottom: 2px solid #d6cfc3;
   padding-bottom: 0.3rem;
   margin-top: 1rem;
@@ -75,7 +76,7 @@ footer {
 /* Estilo para o cabeçalho */
 header {
   text-align: center;
-  padding: 1.2rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem; /* ajustado */
   background-color: #f2ebe1;
   border-bottom: 2px solid #d6cfc3;
 }
@@ -133,15 +134,35 @@ nav a:hover {
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* responsivo ajustado */
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem; /* responsivo ajustado */
   }
 
   nav {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* Botão de voltar contextual */
+.botao-voltar.contextual {
+  display: inline-block;
+  margin: 0 0 1rem 0;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+  background-color: #eae3d8;
+  color: #5c4a3d;
+  border: 1px solid #cfc7b7;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Georgia, serif;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.botao-voltar.contextual:hover {
+  background-color: #e1d6c7;
 }
