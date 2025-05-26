@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prof. Amaro Viana Neto | Saúde Coletiva e Epidemiologia</title>
-  <!-- Aqui você chama o CSS externo -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,59 +18,215 @@
     <h1>Amaro Neto</h1>
     <p>Saúde Coletiva · Geografia · Gestão Pública da Saúde · Educação</p>
   </header>
-  
+
   <nav>
     <a href="index.html">Início</a>
     <a href="curriculo.html">📄 Currículo</a>
     <a href="https://epidemio.wixsite.com/gave" target="_blank">🔗 Site GAVE</a>
     <a href="https://github.com/veneto9" target="_blank">💻 GitHub</a>
   </nav>
-  
+
   <main>
     <section class="secao">
       <h2>🧑‍⚕️ Sobre Mim</h2>
       <p>Sou Amaro Neto, doutorando em Saúde Coletiva (IESC/UFRJ), Sanitarista e Geógrafo. Mestre em Ensino das Ciências da Saúde, com especializações em Ciências Ambientais e Educação na Saúde para Preceptores do SUS.</p>
-      
       <p>Atuo como Sanitarista na Vigilância Epidemiológica em Barra do Piraí/RJ e professor, conectando saúde pública e território através da análise de dados espaciais em saúde. Meu trabalho integra educação e gestão pública, buscando formas criativas de atuação com foco na análise e comunicação de informações sobre doenças negligenciadas em Saúde Pública.</p>
     </section>
-    
+
     <section class="secao">
       <h2>📚 Projetos</h2>
-      
       <div class="projeto-card">
         <h3>Scripts em R para análises Epidemiológicas</h3>
         <p>Desenvolvimento de ferramentas em R para análise de dados epidemiológicos, facilitando a vigilância e tomada de decisões baseadas em evidências.</p>
       </div>
-      
       <div class="projeto-card">
         <h3>Geoprocessamento em Saúde</h3>
         <p>Mapas e visualizações espaciais para análise da distribuição de doenças negligenciadas, identificando padrões e fatores de risco territoriais.</p>
       </div>
-      
       <div class="projeto-card">
         <h3>Território: análise e visualizações de indicadores</h3>
         <p>Estudo de determinantes sociais e ambientais da saúde através da visualização de indicadores contextuais em diferentes territórios.</p>
       </div>
-      
       <div class="projeto-card">
         <h3>Análise espacial dos casos de Leptospirose no Estado do Rio de Janeiro</h3>
         <p>Investigação dos padrões de distribuição da leptospirose no RJ, identificando fatores ambientais e sociais associados à incidência da doença.</p>
       </div>
     </section>
-  </main>
-  
+
+    <section id="blog-section" class="container my-5">
+        <h2 class="text-center mb-4 custom-section-title">Últimas Notícias do Blog</h2>
+        <div id="blog-posts-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <p class="text-center w-100">Carregando últimas notícias...</p>
+        </div>
+    </section>
+    <section id="clipping-section" class="container my-5">
+        <h2 class="text-center mb-4 custom-section-title">Clipping de Notícias</h2>
+        <div id="clipping-posts-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <p class="text-center w-100">Carregando clipping...</p>
+        </div>
+    </section>
+    </main>
+
   <footer>
     <div>
       <p>Amaro Neto | <a href="curriculo.html">Ver currículo</a></p>
     </div>
-    
-    <section>
-      <h2 style="font-size: 1rem; margin: 1rem 0 0.5rem;">🌐 Contato</h2>
-      <p style="margin: 0.2rem 0;">🐦 <a href="https://twitter.com/amaroveneto" target="_blank">@amaroveneto</a></p>
-      <p style="margin: 0.2rem 0;">📸 <a href="https://instagram.com/amarovneto" target="_blank">@amarovneto</a></p>
-      <p style="margin: 0.2rem 0;">📫 <a href="mailto:amaroneto@ufrj.br">amaroneto@ufrj.br</a></p>
-      <p style="margin: 0.2rem 0;">📍 Rio de Janeiro, Brasil</p>
+    <section class="secao-contato">
+      <h2>🌐 Contato</h2>
+      <p>🐦 <a href="https://twitter.com/amaroveneto" target="_blank">@amaroveneto</a></p>
+      <p>📸 <a href="https://instagram.com/amarovneto" target="_blank">@amarovneto</a></p>
+      <p>📫 <a href="mailto:amaroneto@ufrj.br">amaroneto@ufrj.br</a></p>
+      <p>📍 Rio de Janeiro, Brasil</p>
     </section>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    // Bloco 3: Código JavaScript para popular as Últimas Notícias do Blog (via RSS/Proxy)
+
+    // IMPORTANTE: Substitua esta URL pela URL real do seu feed RSS ou do serviço proxy (ex: RSS2JSON).
+    // Exemplo com um feed de teste (PODE NÃO FUNCIONAR DEVIDO A CORS SEM PROXY):
+    const rssFeedUrl = 'https://rss.blog.gov.bc.ca/districts/prince-george/'; // SUBSTITUA!
+    // Para usar com Substack, você precisará do feed RSS do seu Substack (ex: https://seunome.substack.com/feed)
+    // e provavelmente de um proxy como RSS2JSON (https://rss2json.com/) para converter para JSON e evitar CORS.
+    // Exemplo com RSS2JSON: `https://api.rss2json.com/v1/api.json?rss_url=https://seunome.substack.com/feed`
+
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        try {
+            const date = new Date(dateString);
+            if (isNaN(date)) return 'Data inválida';
+            return date.toLocaleDateString('pt-BR', options);
+        } catch (e) {
+            return 'Data indisponível';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        const blogContainer = document.getElementById('blog-posts-container');
+
+        if (!blogContainer) {
+            console.error("Contêiner de notícias do blog com ID 'blog-posts-container' não encontrado.");
+            return;
+        }
+
+        blogContainer.innerHTML = '<p class="text-center w-100">Carregando últimas notícias...</p>';
+
+        try {
+            const response = await fetch(rssFeedUrl);
+            if (!response.ok) {
+                throw new Error(`Erro na requisição HTTP! Status: ${response.status} ao buscar ${rssFeedUrl}`);
+            }
+            const feedData = await response.json(); // Assumindo que o proxy retorna JSON
+
+            // Adapte 'feedData.items' conforme a estrutura do JSON retornado pelo seu proxy/feed
+            const posts = feedData.items || [];
+
+            if (posts.length === 0) {
+                blogContainer.innerHTML = '<p class="text-center w-100">Nenhuma notícia disponível no momento.</p>';
+                return;
+            }
+
+            blogContainer.innerHTML = ''; // Limpa a mensagem de carregamento
+
+            // Limita o número de posts exibidos (ex: os 3 mais recentes)
+            const postsToDisplay = posts.slice(0, 3);
+
+            postsToDisplay.forEach(post => {
+                const title = post.title || 'Sem Título';
+                const link = post.link || '#';
+                const pubDate = post.pubDate || post.isoDate; // Tentar pubDate ou isoDate
+                const date = pubDate ? formatDate(pubDate) : 'Data Desconhecida';
+                // Tentar extrair uma imagem. Muitos feeds RSS usam 'enclosure', 'media:thumbnail', ou a primeira <img> no 'content'
+                const imageUrl = post.thumbnail || (post.enclosure && post.enclosure.link) || 'https://via.placeholder.com/400x200/2C3E50/FFFFFF?text=Blog+GAVE'; // Placeholder
+
+                const cardHtml = `
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="${imageUrl}" class="card-img-top" alt="${title}" style="object-fit: cover; height: 200px;">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text small text-muted mb-1">${date}</p>
+                                <h5 class="card-title mt-0">${title}</h5>
+                                <a href="${link}" class="btn btn-primary mt-auto" target="_blank" rel="noopener noreferrer">Ler mais</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                blogContainer.innerHTML += cardHtml;
+            });
+
+        } catch (error) {
+            console.error("Erro ao carregar feed RSS:", error);
+            blogContainer.innerHTML = `<p class="text-center w-100 text-danger">Erro ao carregar notícias do blog. Verifique o console para detalhes (F12).</p><p class="text-center w-100 small text-muted">Certifique-se de que a URL do feed ('${rssFeedUrl}') está correta e acessível, possivelmente via um proxy RSS-to-JSON.</p>`;
+        }
+    });
+  </script>
+
+  <script>
+    // Bloco 4: Código JavaScript para popular o Clipping de Notícias
+
+    // IMPORTANTE: Edite estes dados com suas notícias de clipping reais.
+    const clippingData = [
+        {
+            title: "Brasil enfrenta desafio no combate à Febre Amarela",
+            link: "https://www.example.com/noticia-febre-amarela", // Substitua pelo link real
+            sourceDate: "Fonte: G1 - 20/MAI/2024", // Adapte
+            imageUrl: "https://via.placeholder.com/400x200/34495E/FFFFFF?text=Clipping+1" // Opcional: imagem placeholder
+        },
+        {
+            title: "Pesquisa aponta aumento de casos de Tuberculose",
+            link: "https://www.example.com/noticia-tuberculose", // Substitua
+            sourceDate: "Fonte: Folha de S. Paulo - 18/MAI/2024", // Adapte
+            imageUrl: "https://via.placeholder.com/400x200/34495E/FFFFFF?text=Clipping+2" // Opcional
+        },
+        {
+            title: "Novos casos de Sarampo acendem alerta em capitais",
+            link: "https://www.example.com/noticia-sarampo", // Substitua
+            sourceDate: "Fonte: Estado de Minas - 15/MAI/2024", // Adapte
+            imageUrl: "https://via.placeholder.com/400x200/34495E/FFFFFF?text=Clipping+3" // Opcional
+        },
+        {
+            title: "Ministério da Saúde lança guia sobre Chikungunya",
+            link: "https://www.example.com/noticia-chikungunya", // Substitua
+            sourceDate: "Fonte: Ministério da Saúde - 10/MAI/2024", // Adapte
+            imageUrl: "https://via.placeholder.com/400x200/34495E/FFFFFF?text=Clipping+4" // Opcional
+        },
+        // Adicione mais itens de clipping aqui
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const clippingContainer = document.getElementById('clipping-posts-container');
+
+        if (!clippingContainer) {
+            console.error("Contêiner de clipping com ID 'clipping-posts-container' não encontrado.");
+            return;
+        }
+
+        if (clippingData.length === 0) {
+            clippingContainer.innerHTML = '<p class="text-center w-100">Nenhum item de clipping disponível no momento.</p>';
+            return;
+        }
+
+        clippingContainer.innerHTML = ''; // Limpa a mensagem de carregamento
+
+        clippingData.forEach(item => {
+            const cardHtml = `
+                <div class="col">
+                    <div class="card h-100">
+                        ${item.imageUrl ? `<img src="${item.imageUrl}" class="card-img-top" alt="${item.title}" style="object-fit: cover; height: 150px;">` : ''}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${item.title}</h5>
+                            <p class="card-text small text-muted">${item.sourceDate}</p>
+                            <a href="${item.link}" class="btn btn-primary mt-auto" target="_blank" rel="noopener noreferrer">Ler Notícia</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            clippingContainer.innerHTML += cardHtml;
+        });
+    });
+  </script>
+
 </body>
 </html>
