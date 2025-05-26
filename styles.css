@@ -1,235 +1,247 @@
-/* styles.css com cores terrosas inspirado em Lucy McGowan e Andrew Heiss */
-body {
-  font-family: "Georgia", serif;
+/* styles.css */
+
+/* --- Reset básico e Configurações Globais --- */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f5f1eb;
-  color: #3c2e27;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Sugestão de fonte moderna e legível */
+  line-height: 1.65;
+  color: #333A40; /* Cinza escuro para texto principal, boa legibilidade */
+  background-color: #F8F9FA; /* Fundo off-white sutil */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 16px; /* Tamanho base da fonte */
+}
+
+/* --- Tipografia (opcional, importar fontes) --- */
+/* Descomente se quiser usar Google Fonts. Adicione o @import no topo do CSS ou link no HTML <head> */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, nav a {
+  font-family: 'Montserrat', sans-serif;
+}
+*/
+
+
+/* --- Cabeçalho --- */
+header {
+  background-color: #2C3E50; /* Azul petróleo escuro - profissional e sóbrio */
+  color: #ECF0F1; /* Branco acinzentado para texto no header */
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.8rem; /* Um pouco maior para destaque */
+  font-weight: 500; /* Montserrat medium */
+}
+
+header p {
+  font-size: 1.15rem;
+  color: #BDC3C7; /* Cinza mais claro para o subtítulo */
+  font-weight: 300; /* Lato light */
+}
+
+/* --- Navegação --- */
+nav {
+  background-color: #34495E; /* Tom de azul um pouco mais claro que o header */
+  padding: 0.8rem 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para separação */
+  position: sticky; /* Faz o menu grudar no topo ao rolar */
+  top: 0;
+  z-index: 1000; /* Garante que fique acima de outros conteúdos */
+}
+
+nav a {
+  color: #ECF0F1;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: 500; /* Montserrat medium */
+  transition: background-color 0.25s ease, color 0.25s ease;
+  font-size: 0.95rem;
+  text-transform: uppercase; /* Opcional: para um look mais formal */
+  letter-spacing: 0.5px; /* Opcional: leve espaçamento entre letras */
+}
+
+nav a:hover, nav a:focus {
+  background-color: #4A6572; /* Cor de fundo ao passar o mouse/focar */
+  color: #FFFFFF;
+}
+
+/* --- Conteúdo Principal --- */
 main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem 2.5rem;
-  line-height: 1.7;
-  background-color: #fdfbf8;
-  box-shadow: 0 5px 15px rgba(124, 91, 67, 0.08);
-  border-radius: 8px;
+  flex-grow: 1; /* Faz o main ocupar o espaço restante para o footer ficar no final */
+  max-width: 980px; /* Limita a largura do conteúdo para melhor leitura */
+  margin: 2.5rem auto; /* Centraliza o main e adiciona margem superior/inferior */
+  padding: 0 1.5rem; /* Padding lateral para não colar nas bordas em telas menores */
+  width: 100%;
+}
+
+/* --- Seções Genéricas --- */
+.secao {
+  background-color: #FFFFFF; /* Fundo branco para as seções de conteúdo */
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 8px; /* Bordas arredondadas suaves */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07); /* Sombra sutil para profundidade */
+}
+
+.secao h2 {
+  font-size: 1.9rem;
+  color: #2C3E50; /* Cor do título da seção (mesma do header) */
+  margin-bottom: 1.8rem;
+  border-bottom: 3px solid #5DADE2; /* Linha azul clara (cor de destaque) abaixo do título */
+  padding-bottom: 0.8rem;
+  font-weight: 500; /* Montserrat medium */
+}
+
+.secao p {
+  margin-bottom: 1.2rem;
+  color: #495057; /* Cinza um pouco mais escuro para parágrafos */
+}
+
+.secao p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Cards de Projeto --- */
+.projeto-card {
+  background-color: #FDFDFE; /* Quase branco, levemente diferente da seção */
+  border: 1px solid #E0E6ED; /* Borda sutil */
+  padding: 1.8rem;
+  margin-bottom: 1.8rem;
+  border-radius: 6px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.projeto-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.09); /* Sombra mais pronunciada no hover */
+  transform: translateY(-4px); /* Leve elevação no hover */
+}
+
+.projeto-card:last-child {
+    margin-bottom: 0;
+}
+
+.projeto-card h3 {
+  font-size: 1.35rem;
+  color: #34495E; /* Tom de azul da navegação */
+  margin-bottom: 0.8rem;
+  font-weight: 500; /* Montserrat medium */
+}
+
+/* --- Rodapé --- */
+footer {
+  background-color: #212529; /* Cinza bem escuro, quase preto (Bootstrap dark-bg color) */
+  color: #CED4DA; /* Cinza claro para texto no footer */
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  margin-top: auto; /* Garante que o footer fique no final da página */
+}
+
+footer div p { /* Para "Amaro Neto | Ver currículo" */
+  margin-bottom: 1.5rem;
   font-size: 1rem;
 }
 
-h1 {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background-color: #eae0d5;
-  border-bottom: 2px solid #c8b8a9;
-  color: #5d4037;
+footer section h2 { /* Para "Contato" - removendo estilos inline do HTML é melhor */
+  font-size: 1.25rem !important; /* Sobrescreve o estilo inline */
+  color: #F8F9FA; /* Branco acinzentado */
+  margin-top: 0 !important;
+  margin-bottom: 1.2rem !important;
+  border-bottom: none; /* Remove a borda dos H2 gerais */
+  padding-bottom: 0;
+  font-weight: 500; /* Montserrat medium */
 }
 
-h2 {
-  font-size: 1.3rem;
-  border-bottom: 2px solid #c8b8a9;
-  padding-bottom: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #5d4037;
+footer p {
+  margin: 0.5rem 0 !important; /* Ajusta margens dos parágrafos de contato */
+  font-size: 0.95rem;
 }
 
-p, ul {
-  margin: 0.8rem 0 1.2rem 0;
-}
-
-ul {
-  list-style-type: square;
-  padding-left: 1.5rem;
-  color: #5d4037;
-}
-
-a {
-  color: #8b6c5c;
+footer a {
+  color: #79A6DC; /* Azul claro para links no footer, bom contraste com fundo escuro */
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-a:hover {
-  color: #c8765f;
+footer a:hover, footer a:focus {
   text-decoration: underline;
+  color: #A0C3EB; /* Azul um pouco mais claro no hover */
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #c8b8a9;
-  margin: 2rem 0;
-}
-
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  padding: 1.5rem;
-  background-color: #eae0d5;
-  color: #5c4a3d;
-  border-top: 1px solid #c8b8a9;
-}
-
-header { 
-  text-align: center; 
-  padding: 1.5rem 1rem; 
-  background-color: #eae0d5; 
-  border-bottom: 2px solid #c8b8a9; 
-} 
-
-header h1 { 
-  font-size: 1.8rem; 
-  margin-bottom: 0.5rem; 
-  color: #5d4037;
-} 
-
-header p { 
-  margin-top: 0; 
-  font-size: 1rem; 
-  color: #6b4c3b;
-}
-
-/* Estilo para o menu de navegação */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-  padding: 1.2rem;
-  background-color: #d5c6b6;
-  border-bottom: 1px solid #c8b8a9;
-}
-
-nav a {
-  color: #5d4037;
+/* --- Links Globais (se não especificado de outra forma) --- */
+a {
+  color: #347AB6; /* Tom de azul para links no corpo do texto */
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  position: relative;
-  padding-bottom: 3px;
+  font-weight: 500; /* Lato bold ou Montserrat medium */
+  transition: color 0.2s ease;
 }
 
-nav a:hover {
-  text-decoration: none;
-  color: #8b6c5c;
+a:hover, a:focus {
+  text-decoration: underline;
+  color: #285F8F; /* Tom mais escuro no hover */
 }
 
-nav a:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #8b6c5c;
-  transition: width 0.3s ease;
-}
-
-nav a:hover:after {
-  width: 100%;
-}
-
-/* Botão de voltar */
-.botao-voltar {
-  display: inline-block;
-  margin: 1rem 0 0 1.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #d5c6b6;
-  border: 1px solid #c8b8a9;
-  border-radius: 4px;
-  color: #5d4037;
-  font-size: 0.9rem;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Georgia, serif;
-  transition: all 0.2s ease-in-out;
-}
-
-.botao-voltar:hover {
-  background-color: #c8b8a9;
-  transform: translateY(-2px);
-}
-
-/* Responsivo */
+/* --- Ajustes para Telas Menores (Responsividade) --- */
 @media (max-width: 768px) {
   body {
-    padding: 0;
+    font-size: 15px;
   }
-  
+  header {
+    padding: 2rem 1rem;
+  }
+  header h1 {
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  nav {
+    padding: 0.5rem 0; /* Reduz padding para menu responsivo */
+    position: static; /* Remove o sticky em telas menores se preferir */
+  }
+  nav a {
+    display: block; /* Links da navegação um abaixo do outro */
+    margin: 0.6rem auto;
+    width: 90%; /* Ocupa mais largura */
+    padding: 0.8rem 1rem;
+  }
   main {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+  .secao {
     padding: 1.5rem;
-    margin: 1rem;
-    width: auto;
+    margin-bottom: 1.5rem;
   }
-  
-  h1 {
-    font-size: 1.5rem;
+  .secao h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
   }
-  
-  h2 {
+  .projeto-card {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .projeto-card h3 {
     font-size: 1.2rem;
   }
-  
-  nav {
-    padding: 0.8rem;
-    gap: 1.5rem;
+  footer {
+    padding: 2rem 1rem;
   }
-  
-  nav a {
-    font-size: 1rem;
-    padding: 0.5rem 0;
-  }
-}
-
-/* Botão de voltar contextual */
-.botao-voltar.contextual {
-  display: inline-block;
-  margin: 0 0 1rem 0;
-  padding: 0.3rem 0.8rem;
-  font-size: 0.85rem;
-  background-color: #d5c6b6;
-  color: #5d4037;
-  border: 1px solid #c8b8a9;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Georgia, serif;
-  transition: all 0.2s ease-in-out;
-}
-
-.botao-voltar.contextual:hover {
-  background-color: #c8b8a9;
-  transform: translateY(-2px);
-}
-
-/* Estilos inspirados em Andrew Heiss para cards de projetos */
-.projeto-card {
-  background-color: #faf6f0;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-left: 4px solid #8b6c5c;
-  box-shadow: 0 3px 10px rgba(124, 91, 67, 0.07);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.projeto-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(124, 91, 67, 0.12);
-}
-
-.projeto-card h3 {
-  margin-top: 0;
-  color: #5d4037;
-  font-size: 1.2rem;
-}
-
-/* Estilo para seções de conteúdo */
-.secao {
-  margin-bottom: 2.5rem;
 }
