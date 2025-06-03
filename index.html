@@ -28,7 +28,7 @@
 
   <main>
     <section class="secao">
-      <h2>🧑‍⚕️ Sobre Mim</h2>
+      <h2>Sobre Mim</h2>
       <p>Sou Amaro Neto, doutorando em Saúde Coletiva (IESC/UFRJ), Sanitarista e Geógrafo. Mestre em Ensino das Ciências da Saúde, com especializações em Ciências Ambientais e Educação na Saúde para Preceptores do SUS.</p>
       <p>Atuo como Sanitarista na Vigilância Epidemiológica em Barra do Piraí/RJ e professor, conectando saúde pública e território através da análise de dados espaciais em saúde. Meu trabalho integra educação e gestão pública, buscando formas criativas de atuação com foco na análise e comunicação de informações sobre doenças negligenciadas em Saúde Pública.</p>
     </section>
@@ -118,6 +118,7 @@
             if (!response.ok) {
                 throw new Error(`Erro na requisição HTTP! Status: ${response.status} ao buscar ${rssFeedUrl}`);
             }
+
             const feedData = await response.json(); // Assumindo que o proxy retorna JSON
 
             // Adapte 'feedData.items' conforme a estrutura do JSON retornado pelo seu proxy/feed
